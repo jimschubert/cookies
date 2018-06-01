@@ -6,7 +6,7 @@ It demonstrates re-using a cookie in ASP.NET Core 2.0 API between calls. It's ve
 
 ## Server
 
-You can start the server (`dotnet run`), then curl without a cookie:
+You can start the server (`cd server/src/Org.OpenAPITools && dotnet run`), then curl without a cookie:
 
 ```
 curl -v http://localhost:5000/api/pets
@@ -17,6 +17,8 @@ And with a cookie:
 curl --cookie 'session-id=fc1467d9d76144c4beeb49646d7cc76a' -v http://localhost:5000/api/pets
 ```
 to see how the server implementation behaves.
+
+NOTE: Querying via http://localhost:5000/swagger/ or another tool like Postman most likely won't display the cookie header.
 
 ## Client
 
